@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #2d2d2d;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.screen {
+  display: none;
+  padding: 20px;
+}
+.screen.active {
+  display: block;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button.primary {
+  background: #4caf50;
+  color: white;
+}
+#board-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.board {
+  display: grid;
+  gap: 2px;
+}
+.cell {
+  width: 30px;
+  height: 30px;
+  background: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+}
+.cell.revealed {
+  background: #ccc;
+  color: black;
+  cursor: default;
+}
+.cell.mine {
+  background: red;
+  color: white;
+}
+.cell.flag {
+  background: #444;
+  color: yellow;
+}
+#instructions {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #ddd;
+}
+
+/* Tela inteira com a mesma cor do container e centralizada */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #2d2d2d; /* mesma cor do container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container do jogo */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Animação Game Over / Vitória */
+.animate #board .cell.mine {
+  animation: blink 0.5s alternate 6;
+}
+
+@keyframes blink {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: #444;
+  }
+}
