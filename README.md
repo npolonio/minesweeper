@@ -9,7 +9,7 @@
 ### 📖 Sobre o Projeto
 
 Projeto individual desenvolvido para estudo de **React e TypeScript**.
-O projeto consiste em um **jogo Minesweeper** (Campo Minado) funcional, com seleção de dificuldade, tabuleiro interativo, flags e detecção de vitória/derrota.
+O projeto consiste em um **jogo de Campo Minado** (Minesweeper, em inglês) funcional, com seleção de dificuldade, tabuleiro interativo, flags e detecção de vitória/derrota.
 
 ---
 
